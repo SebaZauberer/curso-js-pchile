@@ -13,8 +13,14 @@ function addTarea(tarea){
 function renderList(){
     //seteamos la lista del array
     lista.innerHTML = '';
+    //recorremos el array
     tareas.forEach(function(item,i){
-        console.log(item);
+        //creamos la etiqueta <li></li>
+        let li = doc.createElement('li');
+        //le asignamos un valor
+        li.innerHTML = item;
+        //insertamos la etiqueta en el DOM
+        lista.appendChild(li);
     });
 }
 
