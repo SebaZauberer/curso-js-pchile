@@ -2,11 +2,12 @@ var doc = document;
 var input = doc.getElementById('box');
 var lista = doc.getElementById('lista');
 var btn = doc.getElementById('add');
-var tareas = ["Primera tarea", "Segunda tarea"]; //ner Array();
+var tareas = []; //ner Array();
 
 //se crea la funcion para agregar tareas al array
 function addTarea(tarea){
     tareas.push(tarea);
+    renderList();
 }
 
 //se crea la funcion que renderiza la lista de tareas
@@ -24,4 +25,6 @@ function renderList(){
     });
 }
 
-renderList();
+btn.addEventListener('click', function(){
+    addTarea(input.value);
+});
