@@ -54,6 +54,12 @@ function renderView(arr){
         var titulo = document.createElement('h3');
         var desc = document.createElement('p');
         var price = document.createElement('strong');
+
+        //insertar el contenido en las etiquetas
+        img.src = item.imagen;
+        titulo.innerText = item.nombre;
+        desc.innerText = item.descripcion;
+        price.innerText = '$'+item.precio;
         
         // seteamos los atributos de los elementos DOM
         col1.appendChild(img);
