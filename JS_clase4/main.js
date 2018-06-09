@@ -1,6 +1,6 @@
 /* 
 Programacion orientada a prototipos
-*/
+
 //este es un constructor de objetos no literales
 function Comida(nombre, tipo, costo, procedencia){
     this.nombre = nombre;
@@ -42,3 +42,10 @@ arr.forEash(function(item, index){
 arr.forEach(function(item, index){
     console.log('log ->', item, index);
 });
+*/
+
+function add(nombre, descripcion, imagen, precio){
+    var p = new Product(nombre,descripcion,imagen,precio);
+    p.save();
+}
+
