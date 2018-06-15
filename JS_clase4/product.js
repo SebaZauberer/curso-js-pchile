@@ -17,10 +17,10 @@ Product.prototype.setStorage = function(arr){
 Product.prototype.save = function(){
     // var nuevoArrayProductos = getStorage();
     var producto = {
-        nombre: this.name,
-        descripcion: this.desc,
-        imagen: this.img,
-        precio: this.price
+        nombre: this.nombre,
+        descripcion: this.descripcion,
+        imagen: this.imagen,
+        precio: this.precio
     }
 
     this.storage.push(producto);

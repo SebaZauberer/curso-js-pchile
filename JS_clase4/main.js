@@ -49,3 +49,20 @@ function add(nombre, descripcion, imagen, precio){
     p.save();
 }
 
+var boton = document.getElementById('add');
+
+var no = document.getElementById('name');
+var de = document.getElementById('desc');
+var im = document.getElementById('img');
+var pe = document.getElementById('price');
+
+boton.addEventListener('click', function(){
+    add(no.value, de.value, im.value, pe.value);
+
+    alert('El producto '+no.value+' ha sido agregado');
+
+    no.value = '';
+    de.value = '';
+    im.value = '';
+    pe.value = '';
+});
