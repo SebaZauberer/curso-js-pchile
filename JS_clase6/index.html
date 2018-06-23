@@ -9,12 +9,20 @@
         body{
             padding-bottom: 100px;
         }
+        .clase1{
+            background-color: #0ff;
+            color: #666;
+        }
+        .clase2{
+            background-color: #f00;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
-    <h1>Mi página Web</h1>
+    <h1 data-name="data del h1">Mi página Web</h1>
     <br><br>
-    <button id="btn">Click!</button>
+    <button id="btn" class="miBoton">Click!</button>
     <br><br>
     <input type="text" id="input">
     <br><br>
@@ -33,8 +41,20 @@
         <br><br>
         <button id="reset">Resetear formulario</button>
     </form>
-
-
+    <br><br>
+    <p class="clase1">ClassList</p>
+    <br>
+    <button id="btn3">Agregar clase</button>
+    <br>
+    <button id="btn4">Toggle</button>
+    <br>
+    <button id="btn5">Eliminar clase</button>
+    <br>
+    <button id="btn6">Verificar clase</button>
+    <br>
+    <button id="btn7">Reemplazar clase</button>
+    <br><br>
+    <button id="btn8">Resetear body</button>
 
 
     <script src="main.js"></script>

@@ -23,12 +23,11 @@ btn2.addEventListener('click', function(event){
     input.value = "";
 });
 
-resetForm.addEventListener('click', function(a){
+/* resetForm.addEventListener('click', function(a){
     a.preventDefault();
-    form.txt.value = "";
-    form.texto.value = "";
-    form.keyup.value = "";
-});
+    var inputs = form.getElementsByTagName('input');
+    console.warn(inputs);
+}); */
 
 // evento dblClick
 dblClick.addEventListener('dblclick', function(){
@@ -39,19 +38,85 @@ dblClick.addEventListener('dblclick', function(){
 // evento onFocus
 label.addEventListener('focus', function(){
     document.body.style.backgroundColor = "tomato";
-})
+});
 
 // evento keyDown
 form.txt.addEventListener('keydown', function(){
     console.log("suelta la tecla (keydown)");
-})
+});
 
 // evento keyPress
 form.texto.addEventListener('keypress', function(){
     console.log("suelta la tecla (keypress)");
-})
+});
 
 // evento keyUp
 form.keyup.addEventListener('keyup', function(){
     console.log("suelta la tecla (keyup)");
-})
+});
+
+/* // previo a que cargue la pagina
+document.addEventListener('DOMContentLoaded', function(){});
+
+// despues de cargue la pagina
+document.addEventListener('load', function(){}); */
+
+document.addEventListener('DOMContentLoaded', function(){
+    /* var tags = document.getElementsByTagName('input');
+    console.info(tags);
+    console.log('tag 2 ->', tags[2]);
+ */
+    var tag = document.querySelector('h1');
+    var clase = document.querySelector('.miBoton');
+    var id = document.querySelector('#btn2');
+    var anidado = document.querySelector('form input');
+
+    /* console.log(tag);*/
+    console.log('dataset ->', tag.dataset.name);
+    /*console.log(clase);
+    console.log(id);
+    console.log(anidado); 
+
+    console.log(clase.classList);
+    clase.classList.add("Segundaclase"*/
+
+    var clase1 = document.querySelector('.clase1');
+    var btn3 = document.querySelector('#btn3');
+    var btn4 = document.querySelector('#btn4');
+    var btn5 = document.querySelector('#btn5');
+    var btn6 = document.querySelector('#btn6');
+    var btn7 = document.querySelector('#btn7');
+    var btn8 = document.querySelector('#btn8');
+
+    btn3.addEventListener('click', function(){
+        clase1.classList.add('clase2');
+    });
+
+    btn4.addEventListener('click', function(){
+        clase1.classList.toggle('clase2');
+    });
+
+    btn5.addEventListener('click', function(){
+        clase1.classList.remove('clase2');
+    });
+
+    btn6.addEventListener('click', function(){
+        if(clase1.classList.contains('clase2')){
+            alert('si existe la clase');
+        } else {
+            alert('no existe la clase');
+        }
+    });
+
+    btn7.addEventListener('click', function(){
+        clase1.classList.replace('clase1','clase2');
+    });
+
+    btn8.addEventListener('click', function(){
+        document.body.innerHTML = `
+            <header>
+                <h1>Mi nuevo <body></h1>
+            </header>
+        `;
+    });
+});
