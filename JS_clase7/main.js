@@ -83,6 +83,39 @@ function validacion(){
         return false;
     }
 
+    //valida los select
+    if(formulario.comuna.selectedIndex == null || formulario.comuna.selectedIndex == 0){
+        alert("Debes seleccionar una comuna");
+        return false;
+    }
+
+    //valida UN checkbox
+    if(!formulario.terminos.checked){
+        alert("Debes estar de acuerdo con los terminos si quieres enviar el formulario");
+        return false;
+    }
+
+    //valida especificamente en este ejercicio tres selectores para la fecha
+    var dia = formulario.dia.selectedIndex;
+    var mes = formulario.mes.selectedIndex;
+    var anio = formulario.anio.selectedIndex;
+
+    if(dia == null || dia == 0 && mes == null || mes == 0 && anio == null || anio == 0){
+        alert("Debes seleccionar una fecha valida");
+        return false;
+    } else {
+        if(dia == null || dia == 0){
+            alert("Debes seleccionar un día");
+            return false;
+        } else if(mes == null || mes == 0){
+            alert("Debes seleccionar un mes");
+            return false;
+        } else if(anio == null || anio == 0){
+            alert("Debes seleccionar un año");
+            return false;
+        }
+    }
+
     // si ninguna de las condiciones se cumple, entonces se retorna 'true' y se envia el formulario
     alert("formulario enviado");
     return true;
