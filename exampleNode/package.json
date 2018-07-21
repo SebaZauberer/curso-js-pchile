@@ -1,0 +1,21 @@
+{
+  "name": "examplenode",
+  "version": "0.0.1",
+  "description": "ejemplo de node js",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "ejemplo",
+    "node"
+  ],
+  "author": "Sebastian Olate H",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "connect-multiparty": "^2.1.1",
+    "express": "^4.16.3"
+  }
+}
