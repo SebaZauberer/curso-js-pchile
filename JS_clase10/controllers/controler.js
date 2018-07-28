@@ -20,7 +20,7 @@ exports.save = (req, res) => {
             cel: req.body.cel,
             email: req.body.email
         }
-    })
+    });
 
     persona.save((err, response) => {
         if (err) {
@@ -49,3 +49,46 @@ exports.find = (req, res) => {
         }
     })
 };
+
+exports.findById = (req, res)=>{
+    var id = req.params.id;
+    Persona.findById({_id:id}, (err, response)=>{
+        if (err) {
+            res.estatus(500).json({
+                message: err
+            })
+        } else {
+            res.estatus(200).json({
+                response
+            });
+        }
+    })
+}
+
+exports.findOne = (req,res) =>{
+    Persona.findOne({name: req.params.name}, (err, response)=>{
+        if (err) {
+            res.estatus(500).json({
+                message: err
+            })
+        } else {
+            res.estatus(200).json({
+                response
+            });
+        }
+    })
+}
+
+exports.remove = (req, res)=>{
+    Persona.remove({_id:req.params.id}, (err, response)=>{
+        if (err) {
+            res.estatus(500).json({
+                message: err
+            })
+        } else {
+            res.estatus(200).json({
+                response
+            });
+        }
+    })
+}
