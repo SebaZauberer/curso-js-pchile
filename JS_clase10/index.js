@@ -1,11 +1,12 @@
 const express = require('express');
-const body = require('connect-multiparty');
+const body = require('connect-multiparty')();
 const app = express();
 const mongoose = require('mongoose');
 const config = require('./settings/config');
 const routes = require('./routes/public')
 
-app.use("/", routes);
+app.use("/", body, routes);
+
 
 mongoose.connect(config.database, err =>{
     if(err){

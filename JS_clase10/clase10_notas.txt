@@ -1,0 +1,7 @@
+//Para instalar las dependencias de node
+
+npm init
+
+//para instalar paquetes de node
+
+npm install --save express connect-multiparty mongoose nodemon
