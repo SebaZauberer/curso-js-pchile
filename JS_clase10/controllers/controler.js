@@ -24,11 +24,11 @@ exports.save = (req, res) => {
 
     persona.save((err, response) => {
         if (err) {
-            res.estatus(500).json({
+            res.status(500).json({
                 message: err
             })
         } else {
-            res.estatus(200).json({
+            res.status(200).json({
                 response
             });
         }
@@ -39,11 +39,11 @@ exports.save = (req, res) => {
 exports.find = (req, res) => {
     Persona.find((err, response) => {
         if (err) {
-            res.estatus(500).json({
+            res.status(500).json({
                 message: err
             })
         } else {
-            res.estatus(200).json({
+            res.status(200).json({
                 response
             });
         }
@@ -54,11 +54,11 @@ exports.findById = (req, res)=>{
     var id = req.params.id;
     Persona.findById({_id:id}, (err, response)=>{
         if (err) {
-            res.estatus(500).json({
+            res.status(500).json({
                 message: err
             })
         } else {
-            res.estatus(200).json({
+            res.status(200).json({
                 response
             });
         }
@@ -68,11 +68,11 @@ exports.findById = (req, res)=>{
 exports.findOne = (req,res) =>{
     Persona.findOne({name: req.params.name}, (err, response)=>{
         if (err) {
-            res.estatus(500).json({
+            res.status(500).json({
                 message: err
             })
         } else {
-            res.estatus(200).json({
+            res.status(200).json({
                 response
             });
         }
@@ -82,11 +82,11 @@ exports.findOne = (req,res) =>{
 exports.remove = (req, res)=>{
     Persona.remove({_id:req.params.id}, (err, response)=>{
         if (err) {
-            res.estatus(500).json({
+            res.status(500).json({
                 message: err
             })
         } else {
-            res.estatus(200).json({
+            res.status(200).json({
                 response
             });
         }
